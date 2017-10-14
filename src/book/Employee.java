@@ -1,10 +1,11 @@
 package book;
 
+import book.samples.interfacesXamples;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
-public class Employee
+public class Employee implements interfacesXamples.Moveable, Cloneable
 {
     private static int nextId;
 
@@ -13,7 +14,9 @@ public class Employee
     private double salary;
     private Date hireDay;
 
-    // Stattic BI+    static
+
+
+    // Static
     {
         Random generator = new Random();
         nextId = generator.nextInt(10000);
@@ -25,9 +28,9 @@ public class Employee
         nextId++;
     }
 
-    public Employee() {
 
-    }
+
+    public Employee() { }
 
     public Employee(String n, double s, int y, int m, int d) {
         name = n;
@@ -46,6 +49,26 @@ public class Employee
         /* some code */
     }
 
+
+
+    public Employee clone() throws CloneNotSupportedException {
+        // obj.clone()
+        Employee cloned = (Employee) super.clone();
+
+        // Изменяемые поля
+        cloned.hireDay = (Date) hireDay.clone();
+
+        return cloned;
+    }
+
+    public void move(double from, double to) {
+        /* some code */
+    }
+
+
+
+    public Double getSalary() {return salary; }
+
     public String getName()
     {
         return name;
@@ -56,13 +79,18 @@ public class Employee
         return (Date) hireDay.clone();
     }
 
+    public void raiseSalary(double add) {
+        salary += add;
+    }
+
     public static int getNextId()
     {
         return nextId;
     }
 
-    public static void main(String[] args) {
-        // Блочный тест.
+    
+
+    public static void logic(String[] args) {
         Employee e = new Employee("Romea", 5000, 2003,3,31);
         System.out.println(Employee.getNextId());
     }
