@@ -1,8 +1,6 @@
 // 261 - ...
 package book.samples;
 
-import book.*;
-
 import java.lang.reflect.*;
 import java.util.Arrays;
 
