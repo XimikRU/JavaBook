@@ -88,7 +88,7 @@ public class Employee implements interfacesXamples.Moveable, Cloneable
         return nextId;
     }
 
-    
+
 
     public static void logic(String[] args) {
         Employee e = new Employee("Romea", 5000, 2003,3,31);
