@@ -13,9 +13,6 @@ public class ClassTest
         BusinessLead bl = new BusinessLead("Raul");
         */
 
-
-
-
         TechnicalLead CTO = new TechnicalLead("Satya Nadella");
         SoftwareEngineer seA = new SoftwareEngineer("Kasey");
         SoftwareEngineer seB = new SoftwareEngineer("Breana");
