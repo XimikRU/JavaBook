@@ -12,7 +12,10 @@ public class ClassTest
         TechnicalLead tl = new TechnicalLead("Straw");
         BusinessLead bl = new BusinessLead("Raul");
         */
-        
+
+
+
+
         TechnicalLead CTO = new TechnicalLead("Satya Nadella");
         SoftwareEngineer seA = new SoftwareEngineer("Kasey");
         SoftwareEngineer seB = new SoftwareEngineer("Breana");
@@ -41,3 +44,4 @@ public class ClassTest
         System.out.println(CFO.getTeamStatus());
     }
 }
+
