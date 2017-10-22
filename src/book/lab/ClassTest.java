@@ -1,7 +1,5 @@
 package book.lab;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class ClassTest
 {
     public static void main(String[] args)
@@ -20,6 +18,8 @@ public class ClassTest
         CTO.addReport(seA);
         CTO.addReport(seB);
         CTO.addReport(seC);
+        seA.setCodeAccess(true);
+        seA.checkInCode();
         System.out.println(CTO.getTeamStatus());
 
         TechnicalLead VPofENG = new TechnicalLead("Bill Gates");
@@ -41,4 +41,3 @@ public class ClassTest
         System.out.println(CFO.getTeamStatus());
     }
 }
-
