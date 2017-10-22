@@ -19,7 +19,8 @@ public class ClassTest
         CTO.addReport(seB);
         CTO.addReport(seC);
         seA.setCodeAccess(true);
-        seA.checkInCode();
+        seB.setCodeAccess(true);
+        seC.setCodeAccess(true);
         System.out.println(CTO.getTeamStatus());
 
         TechnicalLead VPofENG = new TechnicalLead("Bill Gates");
